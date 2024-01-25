@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class golpearGoomba : MonoBehaviour
 {
-    public GameObject objetoAEliminar;
+    public Goomba goomba;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             // Eliminar el objeto pasado por parámetro
-            if (objetoAEliminar != null)
+            if (goomba != null)
             {
-                Destroy(objetoAEliminar);
+                goomba.RecibirDaño();
             }
 
             // También puedes desactivar el script actual después de eliminar el objeto, si es necesario
