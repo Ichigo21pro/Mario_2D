@@ -9,13 +9,17 @@ public class MarioController : MonoBehaviour
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
 
+
     private bool teleported;
- 
+    public Disparar bull;
+    private CrecerDisminuir EstaConArma;
+
 
     void Start()
     {
         marioRigidbody = GetComponent<Rigidbody2D>();
         canJump = false;
+        EstaConArma = GetComponent<CrecerDisminuir>(); // Inicializa EstaConArma en el componente CrecerDisminuir
     }
 
     void Update()
@@ -27,10 +31,20 @@ public class MarioController : MonoBehaviour
         // Salto solo si puede saltar (está en el suelo)
         if (canJump && Input.GetKeyDown(KeyCode.Space))
         {
-            Jump();
+           Jump(); 
+            
+            
         }
 
-     
+        if (Input.GetKeyDown(KeyCode.Z)) {
+            
+            if (EstaConArma != null && EstaConArma.EstaArmaActiva())
+            {
+       
+                bull.DispararBala();
+            }
+            
+        }
 
 
     }

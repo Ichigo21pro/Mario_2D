@@ -43,6 +43,7 @@ public class CrecerDisminuir : MonoBehaviour
     public bool EstaArmaActiva()
     {
         // Devuelve true si el objeto de arma está activo, de lo contrario, devuelve false
+       
         return arma.activeSelf;
     }
 

@@ -11,6 +11,7 @@ TagManager:
   - Meta
   - Setas
   - Enemy
+  - Bull
   layers:
   - Default
   - TransparentFX

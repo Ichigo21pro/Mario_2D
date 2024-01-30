@@ -10,10 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 5473309072325229739}
   - component: {fileID: 5461994879020251189}
+  - component: {fileID: 1213801609439270176}
   - component: {fileID: 3664736329749007314}
   m_Layer: 0
   m_Name: Bull
-  m_TagString: Untagged
+  m_TagString: Bull
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -85,6 +86,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1213801609439270176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7296645360965800234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a7d07dfa4a136a47b958107b52201ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidad: 15
 --- !u!70 &3664736329749007314
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
