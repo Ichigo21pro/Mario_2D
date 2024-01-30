@@ -1611,6 +1611,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7050075894345177577, guid: 58fbcd72e6acebb4c9df54a99fd17585, type: 3}
+      propertyPath: contadorText
+      value: 
+      objectReference: {fileID: 1076271031}
     - target: {fileID: 8474549821950412754, guid: 58fbcd72e6acebb4c9df54a99fd17585, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
