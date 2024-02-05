@@ -13,9 +13,10 @@ public class RecibirDisparo : MonoBehaviour
         if (collision.gameObject.CompareTag("Bull"))
         {
             // Eliminar el objeto pasado por parámetro
-           
+            if (goomba != null)
+            {
                 goomba.RecibirDaño();
-            
+            }
 
             // También puedes desactivar el script actual después de eliminar el objeto, si es necesario
             //gameObject.SetActive(false);
