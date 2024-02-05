@@ -1882,22 +1882,42 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 856078328691737931, guid: 1e9b881bcd5075e4e935734f474d86f5, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3094339262552373852, guid: 1e9b881bcd5075e4e935734f474d86f5, type: 3}
       propertyPath: m_SortingOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3544746857144351701, guid: 1e9b881bcd5075e4e935734f474d86f5, type: 3}
+      propertyPath: m_FlipX
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4518210935564057752, guid: 1e9b881bcd5075e4e935734f474d86f5, type: 3}
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4703714896842765968, guid: 1e9b881bcd5075e4e935734f474d86f5, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 6046194810552983606, guid: 1e9b881bcd5075e4e935734f474d86f5, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261361454023400985, guid: 1e9b881bcd5075e4e935734f474d86f5, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6574718178247370203, guid: 1e9b881bcd5075e4e935734f474d86f5, type: 3}
       propertyPath: bull
       value: 
       objectReference: {fileID: 659436191}
+    - target: {fileID: 7022876439023737926, guid: 1e9b881bcd5075e4e935734f474d86f5, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7190952413541527809, guid: 1e9b881bcd5075e4e935734f474d86f5, type: 3}
       propertyPath: m_Name
       value: Mario
@@ -1941,6 +1961,10 @@ PrefabInstance:
     - target: {fileID: 7418838955209733510, guid: 1e9b881bcd5075e4e935734f474d86f5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7527273267542227555, guid: 1e9b881bcd5075e4e935734f474d86f5, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2187,7 +2211,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7050075894345177577, guid: 58fbcd72e6acebb4c9df54a99fd17585, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7050075894345177577, guid: 58fbcd72e6acebb4c9df54a99fd17585, type: 3}
       propertyPath: contadorText
@@ -2281,7 +2305,8 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3304075786482948463, guid: 58fbcd72e6acebb4c9df54a99fd17585, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

@@ -20,6 +20,8 @@ public class Llegar_meta : MonoBehaviour
             Debug.Log("¡FIN DE JUEGO!");
 
             LlegoAMeta = true;
+
+            Invoke("CambiarEscenaMundo1_1", 3f);
         }
 
         
@@ -39,5 +41,10 @@ public class Llegar_meta : MonoBehaviour
 
             }
         }
+    }
+
+
+    private void CambiarEscenaMundo1_1(){
+        SceneManager.LoadScene("mundo_1.1");
     }
 }

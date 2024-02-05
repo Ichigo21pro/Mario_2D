@@ -8,12 +8,16 @@ public class CrecerDisminuir : MonoBehaviour
     public GameObject smallObject;
     public GameObject arma;
 
+    private CapsuleCollider2D CambioCollider;
+
     private void Start()
     {
         // Al inicio, asegúrate de que solo uno de los objetos esté visible
         bigObject.SetActive(false);
         smallObject.SetActive(true);
         arma.SetActive(false);
+
+        CambioCollider = gameObject.GetComponent<CapsuleCollider2D>();
     }
 
     public void Crecer()
@@ -21,7 +25,10 @@ public class CrecerDisminuir : MonoBehaviour
         bigObject.SetActive(true);
         smallObject.SetActive(false);
         arma.SetActive(false);
-        
+
+
+        CambioCollider.size = new Vector2(1f, 2f);
+        CambioCollider.offset = new Vector2(0f, 0f);
     }
 
     public void Disminuir()
@@ -29,15 +36,18 @@ public class CrecerDisminuir : MonoBehaviour
         smallObject.SetActive(true);
         bigObject.SetActive(false);
         arma.SetActive(false);
-        
-        
+
+        CambioCollider.size = new Vector2(1f, 1f);
+        CambioCollider.offset = new Vector2(0f, -0.5f);
     }
     public void Arma()
     {
         arma.SetActive(true);
         bigObject.SetActive(false);
         smallObject.SetActive(false);
-        
+
+        CambioCollider.size = new Vector2(1f, 2f);
+        CambioCollider.offset = new Vector2(0f, 0f);
     }
 
     public bool EstaArmaActiva()
