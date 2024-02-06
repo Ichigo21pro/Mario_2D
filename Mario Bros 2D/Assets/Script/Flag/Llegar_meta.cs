@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
@@ -12,6 +13,7 @@ public class Llegar_meta : MonoBehaviour
     public float distanciaMaxima = 10f; // Distancia máxima en el eje -x
     public GameObject Bandera;
     private bool LlegoAMeta;
+    public String escenaCambio ;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // Verificar si el jugador colisiona con un objeto con la etiqueta "Meta"
@@ -21,7 +23,7 @@ public class Llegar_meta : MonoBehaviour
 
             LlegoAMeta = true;
 
-            Invoke("CambiarEscenaMundo1_1", 3f);
+            SceneManager.LoadScene(escenaCambio);
         }
 
         
@@ -44,7 +46,4 @@ public class Llegar_meta : MonoBehaviour
     }
 
 
-    private void CambiarEscenaMundo1_1(){
-        SceneManager.LoadScene("mundo_1.1");
-    }
 }
