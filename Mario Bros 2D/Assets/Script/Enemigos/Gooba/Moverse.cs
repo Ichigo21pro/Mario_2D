@@ -8,6 +8,7 @@ public class Moverse : MonoBehaviour
     public string tagDelJugador = "Player";
     public float velocidad = 5f;
     public string tagDeLaCamara = "MainCamera"; // Cambia esto al tag correcto de tu cámara
+    public Goomba goomba;
 
     private Transform player;
     private bool enContactoConCamara = false;
@@ -34,6 +35,16 @@ public class Moverse : MonoBehaviour
         if (other.CompareTag(tagDeLaCamara))
         {
             enContactoConCamara = false;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Limit"))
+        {
+            Debug.Log("¡Gooba se ha caido al vacio!");
+            goomba.RecibirDaño();
+
         }
     }
 

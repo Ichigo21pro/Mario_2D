@@ -104,6 +104,7 @@ GameObject:
   - component: {fileID: 6639163758509703136}
   - component: {fileID: 5390275742228573275}
   - component: {fileID: 8562915876795960794}
+  - component: {fileID: 1216244861995615886}
   m_Layer: 0
   m_Name: Goomba
   m_TagString: Enemy
@@ -222,6 +223,7 @@ MonoBehaviour:
   tagDelJugador: Player
   velocidad: 5
   tagDeLaCamara: MainCamera
+  goomba: {fileID: 8562915876795960794}
 --- !u!114 &8562915876795960794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,6 +236,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed431e2943850c342bb8e7c5da936fd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1216244861995615886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2245843059987780419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b50d6dc76c6bfc4893bbc8c844d06e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goomba: {fileID: 8562915876795960794}
 --- !u!1 &2952598496899222222
 GameObject:
   m_ObjectHideFlags: 0
