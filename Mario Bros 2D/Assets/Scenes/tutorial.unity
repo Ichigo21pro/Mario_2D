@@ -2236,6 +2236,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Controlador Dinero
       objectReference: {fileID: 0}
+    - target: {fileID: 8940953566227699743, guid: 58fbcd72e6acebb4c9df54a99fd17585, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

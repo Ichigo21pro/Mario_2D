@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ControladorCoin : MonoBehaviour
 {
@@ -29,12 +30,28 @@ public class ControladorCoin : MonoBehaviour
 
     private void Start()
     {
-        // Recuperar el contador almacenado en PlayerPrefs
-        contador = PlayerPrefs.GetInt("ContadorCoins", 0);
+        // Verificar la escena actual antes de cargar el contador desde PlayerPrefs
+        string nombreEscena = SceneManager.GetActiveScene().name;
+        if (nombreEscena == "tutorial" || nombreEscena == "mundo_1.1")
+        {
+            // Resetear el contador a 0 si la escena es "tutorial" o "mundo_1.1"
+
+            RestearCOntador();
+        }
+        else
+        {
+            // Recuperar el contador almacenado en PlayerPrefs
+            contador = PlayerPrefs.GetInt("ContadorCoins", 0);
+            
+        }
 
         ActualizarContadorUI();
     }
+    public void RestearCOntador() {
 
+        contador = 0;
+        PlayerPrefs.SetInt("ContadorCoins", 0);
+    }
     public void AumentarContador()
     {
         contador++;
