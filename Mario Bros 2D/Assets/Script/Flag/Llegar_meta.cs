@@ -23,7 +23,7 @@ public class Llegar_meta : MonoBehaviour
 
             LlegoAMeta = true;
 
-            SceneManager.LoadScene(escenaCambio);
+            Invoke("CargarEscena", 3f);
         }
 
         
@@ -44,6 +44,9 @@ public class Llegar_meta : MonoBehaviour
             }
         }
     }
-
+    void CargarEscena()
+    {
+        SceneManager.LoadScene(escenaCambio);
+    }
 
 }

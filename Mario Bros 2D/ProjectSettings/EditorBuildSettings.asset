@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/mundo_1.1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/mundo_1.2.unity
+    guid: 6477492ec98753644b28c3d6f93c432c
+  - enabled: 1
+    path: Assets/Scenes/FINAL.unity
+    guid: c513291c05785ac4fb26604ffd2c3439
   m_configObjects: {}

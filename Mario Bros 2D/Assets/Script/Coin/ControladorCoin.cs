@@ -44,8 +44,9 @@ public class ControladorCoin : MonoBehaviour
             contador = PlayerPrefs.GetInt("ContadorCoins", 0);
             
         }
-
+        
         ActualizarContadorUI();
+        
     }
     public void RestearCOntador() {
 
@@ -56,6 +57,11 @@ public class ControladorCoin : MonoBehaviour
     {
         contador++;
         ActualizarContadorUI();
+       
+    }
+    public int ObtenerContador()
+    {
+        return contador;
     }
 
     private void ActualizarContadorUI()
@@ -66,6 +72,8 @@ public class ControladorCoin : MonoBehaviour
             contadorText.text = "Monedas: " + contador;
         }
     }
+
+   
 
     private void OnDestroy()
     {

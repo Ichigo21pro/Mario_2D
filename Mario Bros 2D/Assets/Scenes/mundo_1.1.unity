@@ -2389,7 +2389,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2315792347687825441, guid: 50052d0d91a093148ba2b5239fdb48f1, type: 3}
       propertyPath: escenaCambio
-      value: FINAL
+      value: mundo_1.2
       objectReference: {fileID: 0}
     - target: {fileID: 7164717217582746620, guid: 50052d0d91a093148ba2b5239fdb48f1, type: 3}
       propertyPath: m_Name
@@ -5045,7 +5045,7 @@ PrefabInstance:
     - target: {fileID: 7050075894345177577, guid: 58fbcd72e6acebb4c9df54a99fd17585, type: 3}
       propertyPath: contadorText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1260053478}
     - target: {fileID: 8474549821950412754, guid: 58fbcd72e6acebb4c9df54a99fd17585, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
