@@ -4,6 +4,7 @@ using UnityEngine;
 public class MostrarContadorUI : MonoBehaviour
 {
     public TextMeshProUGUI contadorText;
+    int contador;
 
     // Start is called before the first frame update
     void Start()
@@ -19,11 +20,16 @@ public class MostrarContadorUI : MonoBehaviour
         if (controladorCoin != null && contadorText != null)
         {
             // Obtener el contador del script ControladorCoin
-            int contador = controladorCoin.ObtenerContador();
-            Debug.Log(controladorCoin.ObtenerContador());
+            contador = controladorCoin.ObtenerContador();
+      
 
             // Mostrar el contador en el TextMeshProUGUI
             contadorText.text = "" + contador;
         }
+    }
+
+    public int CantidadContador()
+    {
+        return contador;
     }
 }
