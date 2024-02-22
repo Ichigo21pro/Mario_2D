@@ -3,34 +3,33 @@ using System.Collections.Generic;
 using UnityEngine;
 using static Sqlite;
 using UnityEngine.UI;
+using TMPro;
 
 public class TableSqliteMostrar : MonoBehaviour
 {
-    public GameObject playerPrefab;
-    public VerticalLayoutGroup VerticalLayoutGroup;
 
-    private Sqlite sqlite;
+    public VerticalLayoutGroup verticalLayoutGroup;
+    public GameObject playerPrefab; // Tu prefab que contiene los dos TextMeshPro
 
     void Start()
     {
-        sqlite = FindObjectOfType<Sqlite>();
-        DisplayPlayerData();
+        DisplayPlayerTable();
     }
 
-    void DisplayPlayerData()
+    void DisplayPlayerTable()
     {
-        List<PlayerData> playerDataList = sqlite.GetPlayerData();
+        Sqlite sqliteScript = FindObjectOfType<Sqlite>();
+        List<PlayerData> playerDataList = sqliteScript.ReadPlayerData();
 
         foreach (PlayerData playerData in playerDataList)
         {
-            // Crear visualmente un objeto para representar al jugador
-            GameObject playerObject = Instantiate(playerPrefab, VerticalLayoutGroup.transform);
+            GameObject playerObject = Instantiate(playerPrefab, verticalLayoutGroup.transform);
 
-            // Configurar el objeto con los datos del jugador
-            Text[] textFields = playerObject.GetComponentsInChildren<Text>();
+            TextMeshProUGUI playerNameText = playerObject.transform.Find("nombre").GetComponent<TextMeshProUGUI>();
+            playerNameText.text = playerData.playerName;
 
-            textFields[1].text = "Nombre: " + playerData.Nombre;
-            textFields[2].text = "Score: " + playerData.Score;
+            TextMeshProUGUI playerScoreText = playerObject.transform.Find("puntuacion").GetComponent<TextMeshProUGUI>();
+            playerScoreText.text = playerData.playerScore.ToString();
         }
     }
 }
