@@ -13,7 +13,9 @@ public class Sqlite : MonoBehaviour
         // Establecer la conexión a la base de datos
         connectionString = "URI=file:" + Application.dataPath + "/nombre_de_tu_base_de_datos.db";
         CreatePlayerTable();  // Asegurarse de que la tabla existe al inicio
-    }
+        GetPlayerData();
+    
+        }
 
     void CreatePlayerTable()
     {
@@ -62,4 +64,46 @@ public class Sqlite : MonoBehaviour
             dbConnection.Close();
         }
     }
+
+    ////////////////////////////////////////////////////////
+
+    public class PlayerData
+    {
+        public string Nombre;
+        public int Score;
+    }
+
+    public List<PlayerData> GetPlayerData()
+    {
+        List<PlayerData> playerDataList = new List<PlayerData>();
+
+        using (IDbConnection dbConnection = new SqliteConnection(connectionString))
+        {
+            dbConnection.Open();
+
+            using (IDbCommand dbCommand = dbConnection.CreateCommand())
+            {
+                string selectQuery = "SELECT Nombre, Score FROM Jugadores ORDER BY Score DESC";
+                dbCommand.CommandText = selectQuery;
+
+                using (IDataReader reader = dbCommand.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        PlayerData playerData = new PlayerData();
+                        playerData.Nombre = reader.GetString(0);
+                        playerData.Score = reader.GetInt32(1);
+
+                        playerDataList.Add(playerData);
+                    }
+                }
+            }
+
+            //dbConnection.Close();
+        }
+
+        return playerDataList;
+    }
+
+
 }
