@@ -1117,9 +1117,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d92206b43414a264b8a40dd278e7c51f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerListContainer: {fileID: 1810921713}
+  verticalLayoutGroup: {fileID: 1810921714}
   playerPrefab: {fileID: 7488534236993085265, guid: 18f967b26dd4ffc43a28d4ba2a56f67d, type: 3}
-  databaseManager: {fileID: 1309286782}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
