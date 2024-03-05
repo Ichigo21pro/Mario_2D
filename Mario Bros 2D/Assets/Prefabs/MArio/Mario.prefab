@@ -387,10 +387,10 @@ GameObject:
   - component: {fileID: 7418838955209733510}
   - component: {fileID: 2576129831356814446}
   - component: {fileID: 856078328691737931}
-  - component: {fileID: 6574718178247370203}
   - component: {fileID: 9101788705426745598}
   - component: {fileID: 8409863625376228036}
   - component: {fileID: 4280605168033184071}
+  - component: {fileID: 6574718178247370203}
   - component: {fileID: 6368869324559466740}
   - component: {fileID: 5182442210855619133}
   m_Layer: 3
@@ -480,23 +480,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.5}
   m_Size: {x: 1, y: 1}
   m_Direction: 0
---- !u!114 &6574718178247370203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7190952413541527809}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 086eada3faf89604182ca62558b96f15, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 8
-  jumpForce: 13
-  jumpSound: {fileID: 6368869324559466740}
-  shootSound: {fileID: 5182442210855619133}
-  bull: {fileID: 5455503424972172264}
 --- !u!114 &9101788705426745598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -536,6 +519,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e8a60eb0e9afab4ebba2c408e707595, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6574718178247370203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7190952413541527809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 086eada3faf89604182ca62558b96f15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 8
+  jumpForce: 13
+  jumpSound: {fileID: 6368869324559466740}
+  shootSound: {fileID: 5182442210855619133}
+  bull: {fileID: 5455503424972172264}
 --- !u!82 &6368869324559466740
 AudioSource:
   m_ObjectHideFlags: 0
@@ -642,7 +642,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 48fe183b29594cf4e9e00e7bc5924076, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b07f31b40b0e4b8438e812b5273203d2, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
