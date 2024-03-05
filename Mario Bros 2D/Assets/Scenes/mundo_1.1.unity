@@ -4871,6 +4871,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5455503424972172264, guid: 1e9b881bcd5075e4e935734f474d86f5, type: 3}
+      propertyPath: objetoADispararEjeX
+      value: 
+      objectReference: {fileID: 7296645360965800234, guid: 0811727e2e95e7d46916b8a8b4551cfe, type: 3}
+    - target: {fileID: 5455503424972172264, guid: 1e9b881bcd5075e4e935734f474d86f5, type: 3}
+      propertyPath: objetoADispararEjeMenosX
+      value: 
+      objectReference: {fileID: 3508793717452239492, guid: cadb3ff605139124682957313c891973, type: 3}
     - target: {fileID: 7190952413541527809, guid: 1e9b881bcd5075e4e935734f474d86f5, type: 3}
       propertyPath: m_Name
       value: Mario
