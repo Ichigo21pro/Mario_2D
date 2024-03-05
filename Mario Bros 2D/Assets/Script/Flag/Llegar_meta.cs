@@ -14,12 +14,13 @@ public class Llegar_meta : MonoBehaviour
     public GameObject Bandera;
     private bool LlegoAMeta;
     public String escenaCambio ;
+    public AudioSource Fin;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // Verificar si el jugador colisiona con un objeto con la etiqueta "Meta"
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("¡FIN DE JUEGO!");
+            Fin.Play();
 
             LlegoAMeta = true;
 
