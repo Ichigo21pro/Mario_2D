@@ -9,6 +9,9 @@ public class MarioController : MonoBehaviour
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
 
+    public AudioSource jumpSound;
+    public AudioSource shootSound;
+
     private bool teleported;
     public Disparar bull;
     private CrecerDisminuir EstaConArma;
@@ -28,6 +31,9 @@ public class MarioController : MonoBehaviour
         if (canJump && Input.GetKeyDown(KeyCode.Space))
         {
             Jump();
+            jumpSound.Play();
+
+
         }
 
         if (Input.GetKeyDown(KeyCode.Z))
@@ -38,11 +44,13 @@ public class MarioController : MonoBehaviour
                 {
                     // Mirando hacia la izquierda, realiza la acción correspondiente
                     bull.DispararBalaMenosX();
+                    shootSound.Play();
                 }
                 else if (transform.localScale.x > 0)
                 {
                     // Mirando hacia la derecha, realiza la acción correspondiente
                     bull.DispararBala();
+                    shootSound.Play();
                 }
             }
         }
@@ -77,8 +85,12 @@ public class MarioController : MonoBehaviour
         canJump = true;
     }
 
+  
+
     public void Teleport(Vector3 targetPosition)
     {
         transform.position = targetPosition;
     }
+
+   
 }
